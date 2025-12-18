@@ -1,0 +1,1070 @@
+/* ESTILOS GENERALES*/
+
+*{
+margin: 0;  /* Elimina márgenes predeterminados */
+padding: 0; /* Elimina rellenos predeterminados */
+box-sizing: border-box;  /* Hace que el ancho total incluya borde y relleno (más fácil de controlar el layout) */
+}
+
+
+:root{
+--colorTitulos: rgb(139, 197, 219);
+--colorTextosmenu:rgb(139, 197, 219);
+--colorTextos: rgb(0, 0, 0);
+--colorTextosBoton: #ffffff;
+--colorBotones: rgb(139, 197, 219);
+--colorEnlaces: rgb(0, 0, 0);
+--colorEnlaceshover: rgb(129, 129, 129);
+--colorBackground:  #8bc5db;
+--colorBotonhover: #005fa3;
+--colorBackgroundTestimonios: #efefef;
+}
+
+html{
+font-size: 16px; /* esta medida es lo que define nuestro rem */
+}
+
+
+/* Fuente global */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ================================
+   STICKY FOOTER — Flexbox
+   ================================ */
+
+body {
+    min-height: 100vh;      
+    display: flex;          
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    margin-top: auto;
+}
+
+
+/* Evitar scroll horizontal global */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Definimos ancho de contenedor */
+
+  /*  Clase .container: se usa para limitar el ancho del contenido y centrarlo en la pantalla. */
+.container{
+    width: 80%;
+    max-width: 1200px; /* ancho máximo web */
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 0 20px; /* Añade espacio lateral interno */
+    overflow: hidden; /* Evita que el contenido desborde el contenedor */
+    -border: 1px dotted;
+    
+}
+
+
+/* ESTILOS HEADER */
+
+/*Menu de Navegación */
+.menu{ 
+
+display: flex; /* pone logo y enlaces en fila */
+justify-content: space-between; /* Logo a la izquierda, enlaces a la derecha */
+align-items: center; /* Centra verticalmente todo */
+height: 70px; /* Altura fija del menú */
+ -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+}
+
+/* estilos logo*/
+.menu__logo{
+display: flex;
+align-items: center; /* centra el logo verticalmente */
+height: 100%; /* Ocupa toda la altura del menú (70px) */
+margin-top: 28px;
+ -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+}
+
+.logo__imagen {
+display: block; /* Evita espacio fantasma debajo */
+height: 200px; /* Tamaño fijo para el logo */
+ -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+}
+
+
+/* estilos enlaces */
+
+/* Lista de navegación (ul) del menú. */
+.nav__lista{
+
+    display: flex; /* Pone los enlaces en fila (no en columna) */
+    align-items: center;
+    list-style: none; /* Elimina los puntitos de la lista  */
+    gap: 2rem; /* Añade espacio entre enlaces */
+    margin-right: 10px;
+    -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+
+}
+
+/*    Enlaces de navegación (a)*/
+.nav__link {
+text-decoration: none; /* Quita el subrayado de los enlaces */
+color: var(--colorTextosmenu); /* Usa variable CSS para el color Cambia el color al pasar el mouse */
+font-weight: 500;
+    -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+
+}
+
+.nav__link:hover {
+  color: var(--colorBotonhover);
+    transition: all 0.3s ease; /* Hace que los cambios (hover, transform, color) sean suaves */
+}
+
+
+/* === BOTÓN CTA "Súmate" === */
+.nav__cta {
+  background-color: var(--colorBotones); /* azul definido en variables */
+  color: var(--colorTextosBoton);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease; /* Hace que los cambios (hover, transform, color) sean suaves */
+}
+
+/* Efecto al pasar el ratón */
+.nav__cta:hover {
+  color: white;
+ background-color: var(--colorBotonhover);  /* Cambia el color de fondo a un tono azul más oscuro */
+  transform: scale(1.05);     /* Aumenta el tamaño ligeramente (5%) al pasar el ratón */
+}
+
+
+/* ESTILOS HERO */
+
+.hero{
+height: 600px;  /* Altura fija del hero */
+width: 100%;   /* Ocupa todo el ancho de la pantalla */
+padding: 0 -20px;   /* Espaciado lateral interno */
+background-image: url(fotos-proyecto-02/hero\ ok.webp);
+background-size: cover; /* permite que tras hacer un background de imagen, la imagen se ajuste al box definido */
+background-position: center; /* centra la imagen */
+display: flex; /* Usa Flexbox para alinear contenido */
+align-items: center;  /* centra verticalmente */
+justify-content: flex-start; /* Coloca el texto a la izquierda */
+padding-left: 8%;   /* Deja espacio desde el borde izquierdo */
+text-align: center;
+position: relative;   /* Necesario para colocar la capa :before */
+
+}
+
+
+/* Capa oscura sutil sobre toda la imagen */
+.hero:before {
+  content: "";  /* Crea una capa vacía */
+  position: absolute; /* Posición absoluta dentro del hero */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* leve sombra sobre la imagen */
+  z-index: 1;
+}
+
+/* Contenido del hero */
+
+.hero__contenido {
+  background-color: rgba(255, 255, 255, 0.623); /* blanco translúcido */
+  padding: 3rem;
+  border-radius: 15px;
+  max-width: 900px;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+/* Tipografía */
+.hero__titulo{
+    font-size: 2rem; /* Tamaño del título */
+    margin-bottom: 0.5em; /* espacio entre título y subtítulo */
+
+}
+
+.hero__texto{
+    font-size:  1.2rem; /* Tamaño del subtítulo */
+    font-weight: 300;
+    margin-bottom: 1em; /* espacio entre subtítulo y botón */
+
+}
+
+.hero__boton {
+margin-top: 1em; /* espacio extra encima del botón */
+display: inline-block; /* Hace que el enlace (<a>) se comporte como un botón rectangular */
+background-color: var(--colorBackground);  /* Color de fondo azul principal */
+color: var(--colorTextosBoton);  /* Color del texto dentro del botón */
+padding: 0.9em 2em; /* Espaciado interno: 0.9em arriba/abajo, 2em a los lados */
+border-radius: 30px; /* Bordes redondeados */
+text-decoration: none; /* Quita el subrayado típico de los enlaces */
+font-weight: 600; /* Texto seminegrita para mayor legibilidad */
+transition: all 0.3s ease; /* Hace que los cambios (hover, transform, color) sean suaves */
+
+}
+
+/* --- Efecto al pasar el ratón por encima (hover) --- */
+.hero__boton:hover {
+  background-color: var(--colorBotonhover);  /* Cambia el color de fondo a un tono azul más oscuro */
+  transform: scale(1.05);     /* Aumenta el tamaño ligeramente (5%) al pasar el ratón */
+}
+
+
+ /* ESTILOS NOTICIAS */
+
+.noticias{
+text-align: center; /* Centra el título de la sección */
+padding: 0 -20px; /* se pone 0 arriba y abajo para que las cajas aparezcan juntas, ya luego lo podemos modificar en las específicas */ 
+ /* Se pone 20px para que las web en movil tengan un espacio lateral */
+ 
+}
+
+/* Título principal de la sección */
+.noticias__titulo{
+  padding: 4rem 0;   /* Espaciado superior e inferior amplio */
+  font-size: 2rem; /* Tamaño del título */
+  color: var(--colorTitulos);
+  margin-bottom: 1em;  /* Espacio inferior para separar del contenido */
+}
+
+/* Contenedor que agrupa todas los artículos (los cards) */
+.noticias__contenedor {
+  display: flex;  /* Pone las cards en fila */
+  justify-content: center;
+  gap: 2rem; /* Espacio entre tarjetas */
+  max-width: 1200px;  /* Ancho máximo del contenedor */
+  flex-wrap: wrap;  /* Permite que bajen si no caben */                   
+  margin: 0 auto; /* Centra horizontalmente */
+  -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+             
+}
+
+/* articulos individuales */
+.noticias__card {
+  display: flex;
+  background-color: white;                
+  border-radius: 12px;   
+  width: 260px; /* Tamaño fijo que hace que entren 4, sino al poner wrap se baja una de las 4 */
+  height: 700px;
+  flex-wrap: wrap;           
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* el primer valor de la sombra es el valor x (izquierda-derecha), el segundo valor es y (hacia arriba o hacia abajo), tercer valor (desenfoque) */
+  overflow: hidden;
+  flex-direction: column;  
+  justify-content: space-between; /* reparte espacio: título+texto arriba, botón abajo */ 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.noticias__card:hover {
+  transform: translateY(-10px); /* Eleva la tarjeta al pasar el ratón */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+
+/* Imagen dentro de cada card */
+.noticias__imagen {
+  width: 100%;               /* Que ocupe todo el ancho del contenedor */
+  height: 180px;             /* Altura fija para uniformidad */
+  object-fit: cover;         /* Recorta la imagen sin deformarla */
+}
+
+/* Contenido textual de la card */
+.noticias__contenido{
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  padding: 1.5rem;           /* Espaciado interno */
+  text-align: left;          /* Alineación natural para leer */
+  margin-bottom: auto;
+  overflow: hidden;
+  -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+}
+
+/* Título de la noticia */
+.noticias__titular {
+  font-size: 1.5rem;
+  color: var(--colorTitulos);
+  margin-bottom: 0.8rem; /* espacio entre el titular y el texto */
+}
+
+.noticias__fecha{
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.3em 0;
+
+}
+
+/* Texto de descripción */
+.noticias__texto {
+  font-size: 0.95rem;
+  color:var(--colorTextos);
+  margin-bottom: 1.5rem;
+}
+
+.noticias__boton{
+  display: flex;
+  margin-top: auto;
+ -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+}
+
+
+/* Enlace "Leer más" */
+.noticias__link {
+  display: inline-block;
+  background-color: var(--colorBotones);
+  padding: 0.3em 1em; /* Espaciado interno: 0.3em arriba/abajo, 1em a los lados */
+  border-radius: 15px; /* Bordes redondeados */
+  color: var(--colorTextosBoton);
+  text-decoration: none;
+  font-weight: 600;
+  width: 110px;
+  margin-top: auto;
+  transition: color 0.3s ease;
+}
+
+.noticias__link:hover {
+background-color: var(--colorBotonhover);
+transform: scale(1.05);     /* Aumenta el tamaño ligeramente (5%) al pasar el ratón */
+}
+
+
+ /* ESTILOS ACTIVIDADES */
+
+ .actividades {
+  padding: 4rem 0; /* Espaciado superior e inferior */
+  -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+
+}
+
+/* Título principal */
+.actividades__titulo {
+  text-align: center; /* Centra el título */
+  font-size: 2rem;
+  color: var(--colorTitulos);
+  margin-bottom: 3rem;
+  -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+
+}
+
+/* Contenedor de las 3 tarjetas */
+.actividades__contenido {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 3rem; /* Espacio entre tarjetas */
+  flex-wrap: wrap; /* Permite que bajen a otra fila si no caben */
+}
+
+/* Cada tarjeta de actividad */
+.actividades__card {
+  text-align: center;
+  width: 250px; /* Ancho fijo para que las 3 quepan en línea */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen circular */
+.actividades__imagen {
+  width: 250px;
+  height: 250px;
+  object-fit: cover; /* Ajusta sin deformar */
+  border-radius: 50%; /* Círculo perfecto */
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* *Efecto hover: imagen se agranda y resalta */ 
+.actividades__card:hover .actividades__imagen {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(139, 197, 219, 0.5); /* Sombra azulada */
+}
+
+/* Nombre de la actividad */
+.actividades__nombre {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+
+}
+
+/* Enlace del título */
+.actividades__link {
+  text-decoration: none;
+  color: var(--colorTitulos);
+  transition: color 0.3s ease;
+}
+
+.actividades__link:hover {
+  color: var(--colorBotonhover); /* Azul oscuro al pasar el ratón */
+}
+
+ /* ESTILOS TESTIMONIOS */
+
+ .testimonios{
+text-align: center;
+padding: 4rem 0;
+ }
+
+.testimonios__titulo {
+  font-size: 2rem; /* Tamaño del título */
+  color: var(--colorTitulos);
+  margin-bottom: 1em;  /* Espacio inferior para separar del contenido */
+}
+
+.testimonios__contenedor{
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  gap: 2rem;
+  -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+  
+}
+
+.testimonios__card{
+background-color: var(--colorBackgroundTestimonios);
+border-radius: 20px; /*  Bordes redondeados */
+padding: 2rem 1.5rem;
+width: 260px; /* tamaño para que quepan los 4 testimonios */
+height: 460px;
+text-align: center;
+display: flex;
+flex-direction: column; /* permite que todos los elementos de el articulo esten en columna, es decir, uno debajo del otro */
+align-items: center;
+justify-content: flex-start;
+gap: 1rem; /* Espacio entre elementos internos */
+overflow: hidden;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+-border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+
+}
+
+.testimonios__card:hover {
+  transform: translateY(-10px); /* Eleva la tarjeta al pasar el ratón */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.testimonios__imagen{
+width: 10rem;
+height: 10rem;
+object-fit: cover;
+border-radius: 50%;
+background-size: cover; /* para que la imagen de fondo cubra todo el contenedor */
+background-position: center;
+
+}
+
+.testimonios__contenido{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 200px;
+  justify-content: space-between;
+  -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+
+}
+
+.testimonios__texto{
+color: var(--colorTextos);
+font-size: 0.95rem;
+margin-top: 1rem;
+}
+
+.testimonios__rol {
+  display: block;       /* Hace que baje a la siguiente línea */
+  font-weight: 300;   /* Letra más fina */
+  font-style: italic; /* Cursiva */
+  font-size: 1rem;
+
+}
+
+.testimonios__link{
+margin-top: auto;
+align-self: center;
+display: inline-block;
+background-color: var(--colorBotones);
+border-radius: 15px;
+padding: 0.3em 1em; /* Espaciado interno: 0.3em arriba/abajo, 1em a los lados */
+font-weight: 600;
+color: var(--colorTextosBoton);
+transition: color 0.3s ease;
+text-decoration: none;
+width: 110px;
+
+}
+
+.testimonios__link:hover {
+  background-color: var(--colorBotonhover); /* Azul oscuro al pasar el ratón */
+  transform: scale(1.05);     /* Aumenta el tamaño ligeramente (5%) al pasar el ratón */
+}
+
+/* ESTILOS FORMULARIO*/
+
+.formulario{
+  padding: 4rem 0;
+  margin: auto;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  max-width: 600px;
+  justify-content: center;
+  -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+}
+
+/* Titulo principal*/
+ .formulario__titulo{
+font-size: 2rem;
+color: var(--colorTitulos);
+margin-bottom: 1em;  /* Espacio inferior para separar del contenido */
+}
+
+.formulario__contenedor{
+  justify-content: center;
+  align-items: center; 
+  gap: 2rem;
+  border-radius: 15px;
+  max-width: 600px;
+  justify-content: center;
+  -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+
+}
+
+.formulario__registro {
+  display: flex;
+  flex-direction: column; /* Pone las etiquetas y campos uno debajo de otro */
+  gap: 1.5rem; /* Espacio entre cada campo */
+}
+
+/*  Texto apartados formulario */
+.formulario__label {
+  font-weight: 700;
+  text-align: left; /* Alineadas al inicio del contenedor */
+  color: var(--colorBackground);
+  font-size: 1rem;
+ -border: 1px dotted rgb(83,83,83); /* Ayuda a entender las cajas haciendo una línea de puntitos */
+
+}
+
+/* Campos de texto */
+.formulario__input,
+textarea.formulario__input {
+  width: 100%; /* Que ocupe todo el ancho del contenedor */
+  padding: 1rem 1rem; /* Espaciado interno */
+  justify-content: center;
+  border: none; /* Sin borde visible */
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--colorBackgroundTestimonios);
+  resize: none; /* Evita que el usuario cambie el tamaño */
+  transition: all 0.3s ease; /* Suaviza el efecto al interactuar */
+}
+
+/* Botón submit*/
+.formulario__boton{
+padding: 1rem 1rem;
+width: 50%;
+justify-content: center;
+align-self: center; /* Centra el botón dentro del formulario */
+width: fit-content; /* Se ajusta al tamaño del texto */
+background-color:var(--colorBotones);
+color:var(--colorTextosBoton);
+font-size: 1.2rem;
+font-weight: 600;
+border: none;
+border-radius: 15px;
+
+}
+
+/* Efecto al pasar el ratón */
+.formulario__boton:hover {
+  background-color: var(--colorBotonhover); /* Azul más oscuro */
+  transform: scale(1.05); /* Pequeño aumento */
+}
+
+/* ESTILOS FOOTER*/
+
+/* Contenedor general del footer */
+.footer{
+background-color: var(--colorBackground);
+padding: 4rem 0;  /* espacio arriba y abajo del footer */
+color: var(--colorTextosBoton);
+font-size: 1rem;
+display: flex;
+}
+
+/* al div que tiene todo el contenido le pondremos el ancho, alto y margen de la clase container */
+.footer__container{ 
+  width: 80%;
+  max-width: 1200px; /* ancho máximo web */
+  margin: 0 auto; /* Centra horizontalmente */
+  padding: 0 20px; /* Añade espacio lateral interno */
+  display: flex;   /* usamos flex para repartir en columnas */
+  gap: 2.5rem; /* espacio entre columnas */
+  justify-content: space-between; /* Se separan equitativamente */
+  align-items: flex-start; /* Alineadas arriba */
+  flex-wrap: wrap;
+}
+
+
+/* Título de cada columna */
+.footer__titulo {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+/* === COLUMNA 1: MENÚ === */
+.footer__lista{
+list-style: none;
+gap: 0.5rem;
+}
+
+.footer__item {
+  margin-bottom: 0.5rem;
+}
+
+.footer__link {
+  color: var(--colorTextosBoton);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer__link:hover {
+    color: var(--colorBotonhover); /* Azul oscuro */
+    transform: scale(1.05);
+}
+
+/* === COLUMNA 2: CONTACTO === */
+.footer__contacto {
+  text-align: center; 
+}
+
+.footer__info {
+gap: 0.5rem; /* Espacio entre líneas de contacto */
+}
+
+.footer__item i {
+  margin-right: 0.5rem; /* Espacio entre icono y texto */
+}
+
+/* === COLUMNA 3: REDES SOCIALES === */
+.footer__rrss {
+  text-align: center;
+}
+
+.footer__iconos{
+display: flex;
+justify-content: center; /* centra los iconos */
+gap: 1rem; /* distancia entre iconos */
+margin-top: 1rem;
+transition: all 0.3s ease;
+}
+
+.footer__icono a:hover {
+    transform: scale(1.1);
+    background-color: var(--colorBotonhover);  /* Fondo azul oscuro */
+    color: white;                               /* Icono blanco */
+}
+
+
+.footer__icono a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Tamaño del círculo */
+  height: 40px;
+  border-radius: 50%; /* Círculo */
+  background-color: white; /* Fondo blanco para los iconos */
+  color: var(--colorBackground); /* Icono azul */
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+
+/* === SEPARADOR === */
+.footer__separador {
+  width: 80%;
+  margin: 2rem auto;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.3); /* Línea blanca semitransparente */
+}
+
+
+/* === BLOQUE INFERIOR DEL FOOTER === */
+
+.footer__copy {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--colorBackground);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem; /* Espacio entre el texto y los enlaces */
+}
+
+.footer__copycontenido {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 0.2rem;
+  text-align: center;
+  color: var(--colorBackground);
+  font-weight: 400;
+  margin-top: 0.1rem;
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+}
+
+.footer__copycontenido .footer__link {
+  color:var(--colorBackground);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+.footer__texto1 {
+  margin-top: 1.5rem;
+}
+/* Frase final */
+.footer__texto2:last-of-type {
+  font-style: italic;
+  text-align: center;
+  color: var(--colorBackground);
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* PÁGINAS HTML */
+.titulo__apartado{
+text-align: center;
+color: var(--colorBackground);
+padding: 4rem 0;
+margin-bottom: 700px;
+}
+
+
+/* Checkbox oculto */
+.menu__checkbox {
+    display: none;
+}
+
+/* Icono hamburguesa oculto en escritorio */
+.menu__hamburguesa {
+    display: none;
+    font-size: 2rem;
+    color: var(--colorTextosmenu);
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 200;
+}
+
+/* ==========================================================
+   MEDIA QUERY — RESPONSIVE MOBILE (max-width: 767px)
+   Adaptación según requisitos del proyecto
+   ========================================================== */
+
+@media screen and (max-width: 767px) {
+
+    /* -----------------------------------------
+       1. ELIMINACIÓN DE SCROLL HORIZONTAL
+       ----------------------------------------- */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* -----------------------------------------
+       2. FLEXBOX — ACTIVAR WRAP EN CONTENEDORES
+       ----------------------------------------- */
+
+    /* Contenedor general */
+    .container {
+        width: 95%;
+        padding: 0 10px;
+        overflow: visible;
+    }
+
+    /* Noticias: de fila → columna */
+    .noticias__contenedor {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .noticias__card {
+        width: 100%;
+        height: auto;
+    }
+
+    .noticias__contenido {
+        height: auto;
+    }
+
+    /* Actividades: 3 columnas → 1 */
+    .actividades__contenido {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .actividades__card {
+        width: 100%;
+        max-width: 450px;
+    }
+
+   .actividades__imagen {
+    width: 100%;
+    height: 240px;       /* ALTURA FIJA */
+    object-fit: cover;   /* recorta sin deformar */
+    border-radius: 20px;
+}
+
+    /* Testimonios */
+    .testimonios__contenedor {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .testimonios__card {
+        width: 100%;
+        height: auto;
+    }
+
+    .testimonios__imagen {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    /* -----------------------------------------
+       3. REDISEÑO Y ADAPTACIÓN DEL HERO
+       ----------------------------------------- */
+
+.hero {
+    height: 600px;
+    padding: 3rem 1rem;
+
+    background-image: url("fotos-proyecto-02/hero\ resoponsive.webp");
+    background-size: cover;
+    background-position: center 65%;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;    
+}
+
+    .hero__contenido {
+        width: 95%;
+        padding: 1.2rem;
+        max-width: 600px;
+        border-radius: 12px;
+        text-align: center;
+        
+    }
+
+    .hero__titulo {
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .hero__texto {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero__boton {
+        font-size: 1rem;
+        padding: 0.8rem 1.4rem;
+    }
+}
+
+/* ==========================================================
+   MENÚ HAMBURGUESA — MEJORADO (max-width: 767px)
+   ========================================================== */
+
+@media screen and (max-width: 767px) {
+
+    /* 1. AJUSTES DEL CONTENEDOR HEADER */
+    .menu {
+        position: relative;
+        padding: 0 1rem; /* Ajuste para que no quede pegado a los bordes */
+    }
+
+    /* Logo más pequeño para móvil */
+    .logo__imagen {
+        max-width: 150px; /* Tamaño controlado en móvil */
+        height: auto;
+    }
+
+    /* 2. ICONO HAMBURGUESA */
+    .menu__hamburguesa {
+        display: block;
+        font-size: 2rem;
+        color: var(--colorTextosmenu);
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    /* 3. MENÚ DESPLEGABLE (OCULTO POR DEFECTO) */
+    .menu__enlaces {
+        display: none; /* Oculto */
+        position: absolute;
+        top: 100%; /* Justo debajo del header */
+        left: 0;
+        width: 100%;
+        background-color: var(--colorBackground); /* Fondo azul */
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1); /* Sombra abajo */
+        border-top: 1px solid rgba(255,255,255,0.3); /* Línea divisoria fina arriba */
+        
+        /* Flex en columna y centrado */
+        flex-direction: column;
+        align-items: center;
+        padding: 0; 
+        z-index: 999;
+    }
+
+    /* Lógica para mostrar menú al marcar el checkbox */
+    .menu__checkbox:checked ~ .menu__enlaces {
+        display: flex;
+    }
+
+    /* 4. LISTA DE ENLACES */
+    .nav__lista {
+        flex-direction: column;
+        width: 100%;
+        gap: 0; /* Quitamos gaps para usar paddings */
+        margin: 0;
+    }
+
+    /* Items de lista */
+    .nav__lista li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Líneas separadoras */
+    }
+
+    /* 5. ESTILOS DE LOS ENLACES (TODOS IGUALES) */
+    .nav__link {
+        display: block; /* Para que sea clicable todo el ancho */
+        width: 100%;
+        text-align: center;
+        padding: 1.2rem 0; /* Área de toque cómoda para el dedo */
+        font-size: 1.1rem;
+        color: white; /* Texto blanco para contraste sobre azul */
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav__link:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Efecto sutil al tocar */
+        color: white;
+    }
+
+    /* 6. RESET TOTAL PARA EL BOTÓN "SÚMATE" (.nav__cta) */
+    /* Aquí quitamos el aspecto de botón para que se vea como lista */
+    .nav__cta {
+        background-color: transparent !important; /* Sin fondo azul oscuro */
+        border-radius: 0 !important; /* Sin bordes redondos */
+        padding: 1.2rem 0 !important; /* Mismo padding que los demás */
+        margin: 0 !important;
+        color: white !important; /* Mismo color blanco */
+        width: 100% !important;
+        transform: none !important; /* Quitamos efecto lupa */
+        display: block !important;
+    }
+
+    /* Efecto hover igual al resto */
+    .nav__cta:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        transform: none !important;
+        color: white !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+  /* ==================================================
+     FOOTER RESPONSIVE
+     ================================================== */
+
+  .footer {
+      padding: 2.5rem 0;
+      text-align: center;
+      flex-direction: column;
+  }
+
+  .footer__container {
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+      padding: 0 1.5rem;
+      align-items: center;
+  }
+
+  .footer__titulo {
+      font-size: 1.3rem;
+  }
+
+  .footer__lista,
+  .footer__contacto,
+  .footer__rrss {
+      text-align: center;
+      width: 100%;
+  }
+
+  .footer__iconos {
+      justify-content: center;
+  }
+
+  .footer__separador {
+      width: 90%;
+      margin: 1.5rem auto;
+  }
+
+  /* ===== BLOQUE COPY ===== */
+
+  .footer__copy {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+  .footer__copycontenido {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+  }
+
+  /* Quitar puntitos · en móvil */
+  .footer__copycontenido span {
+      display: none;
+  }
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Puentes de Silencio</title>
+</head>
+
+<body>
+  <!-- ENCABEZADO -->
+  <header class="container"> <!-- caja grande que contiene todo -->
+    
+    <!-- Menu de Navegación -->
+    <nav class="menu"><!-- Caja mediana navegación -->
+        
+      <!-- Logo -->
+       <div class="menu__logo">
+       <a class="logo__link" href="index.html"> 
+      <img class="logo__imagen" src="fotos-proyecto-02/logo_puentes de silencio.svg" alt="Puentes de Silencio" 
+      title="logo" width="200"></a>
+     </div>
+
+     <!-- Checkbox oculto -->
+<input type="checkbox" id="menu-toggle" class="menu__checkbox">
+
+<!-- Icono hamburguesa -->
+<label for="menu-toggle" class="menu__hamburguesa">
+    <i class="fa-solid fa-bars"></i>
+</label>
+
+    <div class="menu__enlaces">
+    <ul class="nav__lista">
+      <li class="nav__item"><a class="nav__link" href="quienes-somos.html">Quiénes somos</a></li>
+      <li class="nav__item"><a class="nav__link" href="actividades.html">Actividades</a></li>
+      <li class="nav__item"><a class="nav__link" href="puentes-en-accion.html">Puentes en acción</a></li>
+      <li class="nav__item"><a class="nav__link" href="historias-inspiradoras.html">Historias inspiradoras</a></li>
+      <li class="nav__item"><a class="nav__link nav__cta" href="sumate.html">Súmate</a></li>
+    </ul>
+   </div>
+
+  </nav>
+
+</header>
+
+<!-- HERO / SECCIÓN PRINCIPAL: HERO full-width lo sacamos fuera del main-->
+
+    <section class="hero">
+      <div class="hero__contenido">
+        <h1 class="hero__titulo">Uniendo mundos a través del silencio</h1>
+        <p class="hero__texto">Promovemos la inclusión social y cultural de las personas sordas</p>
+
+        <!-- CTA principal -->
+          <a href="actividades.html" class="hero__boton">Descubre nuestras actividades</a>
+        </div>
+
+    </section>
+
+ <main class="container">
+
+
+     <!-- NOTICIAS-PUENTES EN ACCION -->
+    <section class="noticias"  aria-label="Sección de noticias">
+      <h2 class="noticias__titulo">Puentes en acción</h2>
+      
+      <div class="noticias__contenedor">
+    <article class="noticias__card">
+      <img class="noticias__imagen" src="fotos-proyecto-02/noticia 1.webp" alt="Niños aprendiendo lengua de signos">
+      <div class="noticias__contenido">
+        <h3 class="noticias__titular">Taller de lengua de signos en colegios</h3>
+        <p class="noticias__fecha">10 de febrero de 2025</p>
+        <p class="noticias__texto">Más de 200 alumnos de primaria participaron en nuestro taller interactivo de lengua de signos. A través de juegos, canciones y dinámicas, los niños aprendieron a comunicarse con sus compañeros sordos y a valorar la importancia de una educación inclusiva desde la infancia.</p>
+      
+      
+        <div class="noticias__boton"><a class="noticias__link" href="#">Leer más</a>
+        </div>
+    </div>
+
+      
+    </article>
+
+    <article class="noticias__card">
+      <img class="noticias__imagen" src="fotos-proyecto-02/noticia 2.1.webp" alt="Actores sordos interpretando una obra de teatro">
+      <div class="noticias__contenido">
+        <h3 class="noticias__titular">Festival de teatro inclusivo</h3>
+         <p class="noticias__fecha">06 de marzo 2025</p>
+        <p class="noticias__texto">El teatro volvió a ser un punto de encuentro entre mundos distintos. 
+          Durante el Festival de Teatro Inclusivo, actores sordos y oyentes compartieron escenario en una obra representada simultáneamente en lengua oral y lengua de signos, demostrando que la cultura es un idioma universal.</p>
+        
+          <div class="noticias__boton"><a class="noticias__link" href="#">Leer más</a>
+        </div>  
+        </div>
+     
+    </article>
+
+    <article class="noticias__card">
+      <img class="noticias__imagen" src="fotos-proyecto-02/noticia 3.webp"  alt="Proyección de película con subtítulos y lengua de signos" >
+      <div class="noticias__contenido">
+        <h3 class="noticias__titular">12 de junio 2025</h3>
+         <p class="noticias__fecha">10 de febrero de 2025</p>
+        <p class="noticias__texto">En colaboración con el Ayuntamiento de Valencia, organizamos la primera proyección accesible del año: 
+una película subtitulada y acompañada de interpretación en lengua de signos. 
+La actividad reunió a más de 300 asistentes y generó un espacio de disfrute compartido sin barreras.</p>
+      
+        <div class="noticias__boton"><a class="noticias__link" href="#">Leer más</a>
+        </div> 
+    </div>
+
+        
+    </article>
+
+    <article class="noticias__card">
+      <img class="noticias__imagen" src="fotos-proyecto-02/noticia 4.webp" alt="Voluntarios repartiendo folletos sobre accesibilidad">
+      <div class="noticias__contenido">
+        <h3 class="noticias__titular">Campaña de sensibilización en la plaza</h3>
+         <p class="noticias__fecha">10 de noviembre de 2025</p>
+        <p class="noticias__texto">Nuestros voluntarios llenaron la Plaza del Ayuntamiento con mensajes de inclusión y empatía. 
+A través de talleres breves y demostraciones de lengua de signos, 
+la ciudadanía descubrió formas sencillas de comunicarse con personas sordas 
+y la importancia de construir una sociedad verdaderamente accesible.</p>
+        <div class="noticias__boton"><a class="noticias__link" href="#">Leer más</a>
+       </div>
+    </div>
+
+    </article>
+  </div>
+</section>
+      
+<!-- ACTIVIDADES -->
+    <section class="actividades"  aria-label="Sección de actividades principales">
+      <h2 class="actividades__titulo">Actividades</h2>
+     
+  <div class="actividades__contenido">
+
+<article class="actividades__card">
+<img class="actividades__imagen" src="fotos-proyecto-02/educación inclusiva.webp" alt="Talleres en lengua de signos">
+<h3 class="actividades__nombre">
+  <a class="actividades__link" href="actividades.html">Educación inclusiva</a>
+</h3>
+</article>
+
+<article class="actividades__card">
+      <img class="actividades__imagen" src="fotos-proyecto-02/cultua accesible 2.webp" alt="Actuaciones teatrales inclusivas">
+      <h3 class="actividades__nombre">
+        <a class="actividades__link" href="actividades.html">Cultura accesible</a>
+      </h3>
+    </article>
+
+    <article class="actividades__card">
+      <img class="actividades__imagen" src="fotos-proyecto-02/sensibilización sensorial.webp" alt="Charlas y campañas de sensibilización">
+      <h3 class="actividades__nombre">
+        <a class="actividades__link" href="actividades.html">Sensibilización social</a>
+      </h3>
+    </article>
+
+  </div>
+</section>
+
+<!-- TESTIMONIOS-HISTORIAS INSPIRADORAS -->
+
+<section class="testimonios" aria-label="Sección de historias inspiradoras">
+  <h2 class="testimonios__titulo">Historias inspiradoras</h2>
+
+  <div class="testimonios__contenedor">
+    <article class="testimonios__card">
+      <img class="testimonios__imagen" src="fotos-proyecto-02/maria actirz.webp" alt="Retrato de María, actriz sorda">
+      <div class="testimonios__contenido">
+        <h3 class="testimonios__nombre">María <span class="testimonios__rol">actriz</span></h3>
+        <p class="testimonios__texto">“Gracias a Puentes de Silencio, participé en una obra teatral en lengua de signos. El público me entendía por completo.”</p>
+        <a class="testimonios__link" href="#">Leer más</a>
+      </div>
+    </article>
+     
+    <article class="testimonios__card">
+      <img class="testimonios__imagen" src="fotos-proyecto-02/Carlos voluntario.webp" alt="Retrato de Carlos, voluntario">
+      <div class="testimonios__contenido">
+        <h3 class="testimonios__nombre">Carlos <span class="testimonios__rol">actor</span></h3>
+        <p class="testimonios__texto">“Dar talleres a niños sordos me hizo entender que la comunicación va mucho más allá de las palabras.”</p>
+        <a class="testimonios__link" href="#">Leer más</a>
+      </div>
+    </article>
+
+    <article class="testimonios__card">
+      <img class="testimonios__imagen" src="fotos-proyecto-02/Ana profesora.webp" alt="Retrato de Ana, profesora">
+      <div class="testimonios__contenido">
+        <h3 class="testimonios__nombre">Ana <span class="testimonios__rol">profesora</span></h3>
+        <p class="testimonios__texto">“He aprendido lengua de signos y ahora puedo comunicarme con todos mis alumnos.”</p>
+        <a class="testimonios__link" href="#">Leer más</a>
+      </div>
+    </article>
+
+    <article class="testimonios__card">
+      <img class="testimonios__imagen" src="fotos-proyecto-02/Jorge artista.webp" alt="Retrato de Jorge, artista">
+      <div class="testimonios__contenido">
+        <h3 class="testimonios__nombre">Jorge <span class="testimonios__rol">artista</span></h3>
+        <p class="testimonios__texto">“La inclusión en el arte me inspira a crear obras que unen a personas oyentes y sordas.”</p>
+        <a class="testimonios__link" href="#">Leer más</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+   <!--FORMULARIO-SÚMATE -->
+
+<section class="formulario"aria-label="Sección de formulario">
+<h2 class="formulario__titulo">Súmate</h2>
+
+    <div class="formulario__contenedor">
+       <form action="#" method="post" class="formulario__registro">
+        <label for="nombre" class="formulario__label">Nombre y Apellidos:</label>
+        <input type="text" id="nombre" name="nombre-y-apellidos" class="formulario__input" required>
+        
+        <label for="mensaje" class="formulario__label">Mensaje:</label>
+         <textarea id="mensaje" name="mensaje" class="formulario__input formulario__textarea" required></textarea>
+        
+        <label for="correo" class="formulario__label">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" class="formulario__input" required>
+        
+        <input type="submit" class="formulario__boton" value="Enviar">
+   </form>
+</div>
+</section>
+
+</main>
+
+    <!--FOOTER -->    
+
+  <footer class="footer" aria-label="Sección de pie de pagina"> <!-- Hemos cambiado la clase del footer, no es container porque quiero que se comporte diferente -->
+  <div class="footer__container"> <!-- este si que es el container, donde aplicaré el ancho que quiera -->
+
+       <!-- Columna 1: Navegación -->
+
+    <div class="footer__menu">
+        <h3 class="footer__titulo">Explora</h3>
+    <ul class="footer__lista">
+      <li class="footer__item"><a class="footer__link" href="quienes-somos.html">Quiénes somos</a></li>
+      <li class="footer__item"><a class="footer__link" href="actividades.html">Actividades</a></li>
+      <li class="footer__item"><a class="footer__link" href="puentes-en-accion.html">Puentes en acción</a></li>
+      <li class="footer__item"><a class="footer__link" href="historias-inspiradoras.html">Historias inspiradoras</a></li>
+      <li class="footer__item"><a class="footer__link" href="sumate.html">Súmate</a></li>
+    </ul>
+    </div>
+
+     <!-- Columna 2: Contacto -->
+
+  <div class="footer__contacto">
+   <h3 class="footer__titulo">Contacto</h3>
+
+  <div class="footer__info">
+
+    <div class="footer__item">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Calle Esperanza 45, Valencia</span>
+    </div>
+
+    <div class="footer__item">
+      <i class="fa-solid fa-envelope"></i>
+      <a class="footer__link" href="mailto:info@puentesdesilencio.org">info@puentesdesilencio.org</a>
+    </div>
+
+    <div class="footer__item">
+      <i class="fa-solid fa-phone"></i>
+      <span>600 123 456</span>
+    </div>
+  </div>
+ </div>
+
+    <!-- Columna 3: Redes sociales -->
+
+ <div class="footer__rrss">
+    <h3 class="footer__titulo">Síguenos</h3>
+
+
+  <div class="footer__iconos">
+    <div class="footer__icono">
+      <a href="https://www.facebook.com"  target="_blank" ><i class="fa-brands fa-facebook-f"></i></a> 
+    </div>
+
+    <div class="footer__icono">
+    <a href="https://www.instagram.com"  target="_blank" ><i class="fa-brands fa-instagram"></i></a> 
+    </div>
+
+      <div class="footer__icono">
+    <a href="https://www.linkedin.com"  target="_blank" ><i class="fa-brands fa-linkedin-in"></i></a> 
+    </div>
+
+      <div class="footer__icono">
+     <a href="https://www.youtube.com"  target="_blank" ><i class="fa-brands fa-youtube"></i></a> 
+    </div>
+
+  </div>
+
+  </div>
+
+</div>
+
+
+</footer>
+
+ <!-- Línea inferior -->
+  <div class="footer__copy">
+
+     <div class="footer__copycontenido">
+     <p class="footer__texto1">© 2025 Puentes de Silencio · Todos los derechos reservados</p>
+    </div>
+      
+<div class="footer__copycontenido">
+  <a class="footer__link" href="#">Aviso legal</a>
+  <span>·</span>
+  <a class="footer__link" href="#">Política de privacidad</a>
+  <span>·</span>
+  <a class="footer__link" href="#">Accesibilidad</a>
+</div>
+    
+    <div class="footer__copycontenido">
+    <p class="footer__texto2">“La inclusión empieza cuando aprendemos a escuchar con el corazón.” </p>
+    </div>
+
+  </div>
+  
+
+</body>
+</html>
